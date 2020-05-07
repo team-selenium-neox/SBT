@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>SeleniumBaseTest</groupId>
+	<artifactId>SBT</artifactId>
+	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>selenium-test</name>
+	<url>http://jboss.org</url>
+
+
+	<dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+	</dependency>
+    
+    <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-api</artifactId>
+    </dependency>
+    
+    <dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    </dependency>
+    
+    <dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>pdfbox</artifactId>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    </dependency>
+    
+    
+  </dependencies>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>junit</groupId>
+  			<artifactId>junit</artifactId>
+  			<version>3.8.1</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.testng</groupId>
+  			<artifactId>testng</artifactId>
+  			<version>7.1.0</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.seleniumhq.selenium</groupId>
+  			<artifactId>selenium-java</artifactId>
+  			<version>3.12.0</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.seleniumhq.selenium</groupId>
+  			<artifactId>selenium-api</artifactId>
+  			<version>3.12.0</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.aventstack</groupId>
+  			<artifactId>extentreports</artifactId>
+  			<version>4.1.5</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>commons-io</groupId>
+  			<artifactId>commons-io</artifactId>
+  			<version>2.1</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.apache.pdfbox</groupId>
+  			<artifactId>pdfbox</artifactId>
+  			<version>2.0.19</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.apache.poi</groupId>
+  			<artifactId>poi</artifactId>
+  			<version>3.14</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.apache.poi</groupId>
+  			<artifactId>poi-ooxml</artifactId>
+  			<version>3.16</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.apache.commons</groupId>
+  			<artifactId>commons-lang3</artifactId>
+  			<version>3.8.1</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>3.8.1</version>
+  		</dependency>
+  	</dependencies>
+  	
+  	<profiles>
+  	<profile>
+  	<id>sonar</id>
+  	<activation>
+  	<activeByDefault>false</activeByDefault>
+  	</activation>
+  	<properties>
+  	<sonar.language>java</sonar.language>
+  	<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+  	<sonar.jacoco.reportMissing.force.zero>true</sonar.jacoco.reportMissing.force.zero>
+  	<sonar.jacoco.itReportPath>${project.basedir}/../target/jacoco-it.exec</sonar.jacoco.itReportPath>
+  	</properties>
+  	
+  	<build>
+  	<pluginManagement>
+  	<plugins>
+  	<plugin>
+  	<groupId>org.apache.maven.plugins</groupId>
+  	<artefactId>maven-surefire-plugin</artefactId>
+  	<version>2.13</version>
+  	</plugin>
+  	
+  	<plugin>
+  	<groupId>org.jacoco</groupId>
+  	<artefactId>jacoco-maven-plugin</artefactId>
+  	<version>0.7.9</version>
+  		</plugin>
+  		  	</plugins>
+  	</pluginManagement>
+  	
+  	<plugins>
+  	<plugin>
+  	<groupId>org.jacoco</groupId>
+  	<artefactId>jacoco-maven-plugin</artefactId>
+  	<configuration>
+  	<append>true</append>
+   	</configuration>
+   	<executions>
+   	<execution>
+   	<id>agent-for-ut</id>
+   	<goals>
+   	<goal>prepare-agent</goal>
+   	</goals>
+   	</execution>
+   	
+   	<execution>
+   	<id>agent-for-it</id>
+   	<goals>
+   	<goal>prepare-agent-integration</goal>
+   	</goals>
+   	</execution>
+   	
+   	<execution>
+   	<id>jacoco-site</id>
+   	<phase>verify</phase>
+   	<goals>
+   	<goal>report</goal>
+   	</goals>
+   	
+   	</execution>
+   	
+   	</executions>
+  
+  	
+</plugin>
+
+</plugins>
+  	</build>
+  	
+  	</profile>
+  	</profiles>
+  	
+  	<build>
+  	<sourceDirectory>src/main/java</sourceDirectory>
+  	<recources>
+  	<recource>
+  	<directory>src/main/resources</directory>
+  	</recource>
+  	</recources>
+  	<testResources>
+  	<testResource>
+  	<directory>src/test/resources</directory>
+  	</testResource>
+  	</testResources>
+  	
+  	<plugins>
+  	<plugin>
+  	<groupId>org.apache.maven.plugins</groupId>
+  	<artefactId>maven-compiler-plugin</artefactId>
+  	<version>3.8.1</version>
+  	<configuration>
+  	<source>1.8</source>
+  	<target>1.8</target>
+  	
+  	</configuration>
+  	</plugin>
+  	
+  	<plugin>
+  	<groupId>org.apache.maven.plugins</groupId>
+  	<artefactId>maven-surefire-plugin</artefactId>
+  	<version>2.13</version>
+  	<configuration>
+  	<suiteXmlFiles>
+  	<suiteXmlFile>testng.xml</suiteXmlFile>
+  	</suiteXmlFiles>
+  	</configuration>
+  	</plugin>
+  	
+  	</plugins>
+  	
+  	</build>
+  	
+  </dependencyManagement>
+</project>
