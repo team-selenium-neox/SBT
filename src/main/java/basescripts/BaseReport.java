@@ -4,9 +4,14 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.apache.maven.shared.utils.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 
 public class BaseReport {
@@ -344,5 +349,78 @@ public class BaseReport {
 		
 		fw.close();
 	}
+	public static void createaemReportFooter() throws IOException {
+		
+		String fileName = "";
+		
+		fileName = aemReportPath + "screenshots" + File.separator + reportName;
+		
+		FileWriter fw = new FileWriter(fileName, true);
+		endTime = getDate("SDF1").substring(11);
+		
+		fw.write("\n");
+		fw.write("\n");
+		fw.write("<scripts>");
+		if (proper.getPropValue(configFile, "chromeHeadless").equalsIgnoreCase("true")) {
+			fw.write("setValue(" + checkedCounter + "," + passedCounter + "," + failedCounter + "," + "'" + browserHeadLess + "'" + "," + "'" + bversion + "'" + "," + "'" + startTime + "'" + "," + "'");
+		} else {
+			fw.write("setValue(" + checkedCounter + "," + passedCounter + "," + failedCounter + "," + "'" + browser + "'" + "," + "'" + bversion + "'" + "," + "'" + startTime + "'" + "," + "'");
+		}
+		fw.write("</scripts>");
+		fw.write("\n");
+		fw.write("\n");
+		fw.write("</div>");
+		fw.write("</form>\n");
+		fw.write("</body>\n");
+		fw.write("</html>\n");
+		fw.close();		
+	}
+	public static void createaemReportSeparator() throws IOException {
+		
+		String fileName = "";
+		
+		fileName = aemReportPath + "screenshots" + File.separator + reportName; 
+		
+		FileWriter fw = new FileWriter(fileName, true);
+		
+		fw.write("<hr-witdth=\"1106\" align=\"left\" style=\"border:solid #2EFEF7 5px;\" />\n\n");
+		fw.close();
+		
+	}
+	
+	public static String getDate(String format) throws IOException {
+		String myDate = "";
+		
+		if (format.equalsIgnoreCase("SDF1")) {
+			myDate = SDF1.format(new Date());
+		}else {
+			myDate = SDF2.format(new Date());
+		}
+		return myDate;
+	}
+	
+	public static void setReportName(String reportValue) throws IOException {
+		reportName = reportValue;
+	}
+	
+	/** 
+	 * 
+	 * takes fail screenshots
+	 * 
+	 * */
+	public static void takeScreenshot(String myTestName) throws IOException {
+		
+		WebDriver driver = BaseBrowser.getDriver();
+		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
+		String filePath = "";
+		
+		filePath = aemReportPath + "screenshots" + File.separator;
+		BaseReport.screenshotFile = filePath + myTestName + "_" + BaseReport.getDate("SDF2") + ".png";
+		BaseReport.screenshotFileLink = myTestName + "_" + BaseReport.getDate("SDF2") + ".png";
+		FileUtils.copyFile(srcFile, new File(BaseReport.screenshotFile));		
+	}
+	
+	
 	
 }

@@ -74,7 +74,7 @@ public void checkText(WebDriver testDriver, String locator, String properfile, S
 	foundStr = webEl.getText().trim();
 	
 	if (!foundStr.equals(foundStr)) {
-		BaseReport.createaemReportAdding(testDriver, cQuestion, expectedStr, foundStr, "");
+		BaseReport.createaemReportAdding(testName, cQuestion, expectedStr, foundStr, "");
 			
 	}
 	else {// xpath not found
@@ -273,7 +273,7 @@ public static WebElement fluentWaitforElement(WebDriver testDriver, WebElement e
 }
 /** 
  * 
- * checks the contend of tables
+ * checks the content of tables
  * 
  * */
 public static String getTableContend(WebDriver testDriver, String tableClassName, String searchString) throws IOException {
