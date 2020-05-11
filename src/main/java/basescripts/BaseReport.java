@@ -239,10 +239,10 @@ public class BaseReport {
 		
 		fw.write("<table width=\"1102\">\n");
 		fw.write("<tr> \n");
-		fw.write("<td class=\"aemCellGrey\"width=\"600\" style=\"color:#08298A; font-size:13px;\">&#160;</td> \n");
-		fw.write("<td class=\"aemCellGrey\"width=\"0\" style=\"color:#08298A; font-size:13px;\">Checks: <input type=\"text\" id=\"cField\" class=\"displayField\" value='';</td> \n");
-		fw.write("<td class=\"aemCellGrey\"width=\"0\" style=\"color:#08298A; font-size:13px; color: green\">Passed: <input type)\"text\" id=\"pField\" class=\"displayField\" value='';</td> \n");
-		fw.write("<td class=\"aemCellGrey\"width=\"0\" style=\"color:#08298A; font-size:13px; color: red\">Failed: <input type)\"text\" id=\"fField\" class=\"displayField\" value='';</td> \n");
+		fw.write("<td class=\"aemCellGrey\" width=\"600\" style=\"color:#08298A; font-size:13px;\">&#160;</td> \n");
+		fw.write("<td class=\"aemCellGrey\" width=\"0\" style=\"color:#08298A; font-size:13px;\">Checks: <input type=\"text\" id=\"cField\" class=\"displayField\" value='';</td> \n");
+		fw.write("<td class=\"aemCellGrey\" width=\"0\" style=\"color:#08298A; font-size:13px; color: green\">Passed: <input type)\"text\" id=\"pField\" class=\"displayField\" value='';</td> \n");
+		fw.write("<td class=\"aemCellGrey\" width=\"0\" style=\"color:#08298A; font-size:13px; color: red\">Failed: <input type)\"text\" id=\"fField\" class=\"displayField\" value='';</td> \n");
 		fw.write("</tr> \n");
 		fw.write("</table> \n");
 		
