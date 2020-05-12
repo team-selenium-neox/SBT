@@ -35,13 +35,13 @@ public class BaseBrowser {
 			
 			setEnv();
 			if (browser.equalsIgnoreCase("gecko")) {
-				BaseBrowserSetUpGecko.geckoSetup();
+				BaseBrowserSetupGecko.geckoSetup();
 			}else if (browser.equalsIgnoreCase("chrome")) {
-				BaseBrowserSetUpChrome.chromeSetup();
+				BaseBrowserSetupChrome.chromeSetup();
 			}else if (browser.equalsIgnoreCase("chromeSeleniumGrid")) {
-				BaseBrowserSetUpChromeSeleniumGrid.chromeSeleniumGridSetup();
+				BaseBrowserSetupChromeSeleniumGrid.chromeSeleniumGridSetup();
 			}else if (browser.equalsIgnoreCase("ie")) {
-				BaseBrowserSetUpIE.ieSetup();
+				BaseBrowserSetupIE.ieSetup();
 			}
 			if (browser.equalsIgnoreCase("gecko") || browser.equalsIgnoreCase("chrome") || browser.equalsIgnoreCase("chromeSeleniumGrid")) {
 				if (env.equalsIgnoreCase("PAGENAME1")) { // PAGENAME needs to be changed under config.properties-->targetEnv 
