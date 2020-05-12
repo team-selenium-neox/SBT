@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import com.sun.tools.javac.util.Options;
+//import com.sun.tools.javac.util.Options;
 
 public class BaseBrowser {
 	
@@ -87,7 +87,7 @@ public class BaseBrowser {
 		
 		if (browser.equalsIgnoreCase("gecko")) {
 			testDriver.close();
-			BaseSetupEnvEnd.killAllGeckoProcesses();
+			BaseSetupEnvEnd.killAllGeckoProcess();
 		}else if (browser.equalsIgnoreCase("chrome")) {
 			testDriver.quit();
 		}else {

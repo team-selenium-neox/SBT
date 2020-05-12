@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 
@@ -262,8 +263,8 @@ public static WebElement fluentWaitforElement(WebDriver testDriver, WebElement e
 	
 	for (int i = 0; i < 5; i++) {
 		try {
-			fwait.until(ExceptedConditions.visibilityOf(el));
-			fwait.until(ExceptedConditions.elementToBeClickable(el));
+			fwait.until(ExpectedConditions.visibilityOf(el));
+			fwait.until(ExpectedConditions.elementToBeClickable(el));
 		} catch (Exception e) {
 			System.err.println("Element not found trying again - " + el.toString().substring(70));
 		}
