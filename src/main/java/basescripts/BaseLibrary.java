@@ -92,6 +92,19 @@ public void checkText(WebDriver testDriver, String locator, String properfile, S
 public void checkText(String testName, String cQuestion, String expectedStr, String foundStr) throws IOException {
 	BaseReport.createaemReportAdding(testName, cQuestion, expectedStr, foundStr.trim(), "");
 }
+
+
+public String getElementText(WebDriver testDriver, String locator, String properFile, String objRef, String testName) throws IOException {
+	String foundStr = "STRING NOT FOUND";
+	WebElement webEl = null;
+	webEl = getWebElement(testDriver, locator, properFile, objRef, testName);
+	
+	foundStr = webEl.getText().trim();
+	
+	return foundStr;
+}
+
+
 /** 
  * 
  * fills input fields
