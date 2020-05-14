@@ -126,96 +126,96 @@
   			<version>3.8.1</version>
   		</dependency>
   	</dependencies>
+  	</dependencyManagement>
   	
-  	<profiles>
+  <profiles>
   	<profile>
-  	<id>sonar</id>
-  	<activation>
-  	<activeByDefault>false</activeByDefault>
-  	</activation>
+  		<id>sonar</id>
+  			<activation>
+  			<activeByDefault>false</activeByDefault>
+  			</activation>
   	<properties>
-  	<sonar.language>java</sonar.language>
-  	<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-  	<sonar.jacoco.reportMissing.force.zero>true</sonar.jacoco.reportMissing.force.zero>
-  	<sonar.jacoco.itReportPath>${project.basedir}/../target/jacoco-it.exec</sonar.jacoco.itReportPath>
+  		<sonar.language>java</sonar.language>
+  		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+  		<sonar.jacoco.reportMissing.force.zero>true</sonar.jacoco.reportMissing.force.zero>
+  		<sonar.jacoco.itReportPath>${project.basedir}/../target/jacoco-it.exec</sonar.jacoco.itReportPath>
   	</properties>
   	
-  	<build>
+  <build>
   	<pluginManagement>
-  	<plugins>
-  	<plugin>
-  	<groupId>org.apache.maven.plugins</groupId>
-  	<artefactId>maven-surefire-plugin</artefactId>
-  	<version>2.13</version>
-  	</plugin>
-  	
-  	<plugin>
-  	<groupId>org.jacoco</groupId>
-  	<artefactId>jacoco-maven-plugin</artefactId>
-  	<version>0.7.9</version>
+  		<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-surefire-plugin</artifactId>
+  			<version>2.13</version>
   		</plugin>
-  		  	</plugins>
+  		
+  	  	<plugin>
+  			<groupId>org.jacoco</groupId>
+  			<artifactId>jacoco-maven-plugin</artifactId>
+  			<version>0.7.9</version>
+  		</plugin>
+  		</plugins>
   	</pluginManagement>
   	
-  	<plugins>
-  	<plugin>
-  	<groupId>org.jacoco</groupId>
-  	<artefactId>jacoco-maven-plugin</artefactId>
-  	<configuration>
-  	<append>true</append>
-   	</configuration>
-   	<executions>
-   	<execution>
-   	<id>agent-for-ut</id>
-   	<goals>
-   	<goal>prepare-agent</goal>
-   	</goals>
-   	</execution>
+  		<plugins>
+  		<plugin>
+  			<groupId>org.jacoco</groupId>
+  			<artifactId>jacoco-maven-plugin</artifactId>
+  		<configuration>
+  			<append>true</append>
+   		</configuration>
+   		<executions>
+   		<execution>
+   			<id>agent-for-ut</id>
+   		<goals>
+   		<goal>prepare-agent</goal>
+   		</goals>
+   		</execution>
    	
-   	<execution>
-   	<id>agent-for-it</id>
-   	<goals>
-   	<goal>prepare-agent-integration</goal>
-   	</goals>
-   	</execution>
+   		<execution>
+   			<id>agent-for-it</id>
+   		<goals>
+   		<goal>prepare-agent-integration</goal>
+   		</goals>
+   		</execution>
    	
-   	<execution>
-   	<id>jacoco-site</id>
-   	<phase>verify</phase>
-   	<goals>
-   	<goal>report</goal>
-   	</goals>
-   	
-   	</execution>
+   		<execution>
+   			<id>jacoco-site</id>
+   			<phase>verify</phase>
+   		<goals>
+   		<goal>report</goal>
+   		</goals>
+   		</execution>
    	
    	</executions>
   
   	
-</plugin>
+	</plugin>
 
-</plugins>
+	</plugins>	
   	</build>
   	
   	</profile>
-  	</profiles>
+  </profiles>
   	
   	<build>
   	<sourceDirectory>src/main/java</sourceDirectory>
-  	<recources>
-  	<recource>
-  	<directory>src/main/resources</directory>
-  	</recource>
-  	</recources>
+  	<resources>
+  	<resource>
+  	<directory>src/main/recources</directory>
+  	</resource>
+  	</resources>
   	<testResources>
   	<testResource>
-  	<directory>src/test/resources</directory>
+  	<directory>src/test/java</directory>
   	</testResource>
   	</testResources>
   	
   	<plugins>
   	<plugin>
   	<groupId>org.apache.maven.plugins</groupId>
-  	<artefactId>maven-compiler-plugin</artefactId>
+  	<artifactId>maven-compiler-plugin</artifactId>
   	<version>3.8.1</version>
   	<configuration>
   	<source>1.8</source>
@@ -226,7 +226,7 @@
   	
   	<plugin>
   	<groupId>org.apache.maven.plugins</groupId>
-  	<artefactId>maven-surefire-plugin</artefactId>
+  	<artifactId>maven-surefire-plugin</artifactId>
   	<version>2.13</version>
   	<configuration>
   	<suiteXmlFiles>
@@ -239,5 +239,5 @@
   	
   	</build>
   	
-  </dependencyManagement>
+  
 </project>

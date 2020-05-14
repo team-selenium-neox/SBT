@@ -40,7 +40,7 @@ public class BaseReport {
 	public static String browserHeadLess = "chrome (headless)";
 	public static String bversion = "";
 	public static String reportName = "aemReport.htm";
-	public static String configFile = "aem_config.properties";
+	public static String configFile = "config.properties";
 	
 	private static final SimpleDateFormat SDF1 = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss"); // Timestamp for Report
 	private static final SimpleDateFormat SDF2 = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss"); // Timestamp for Error screenshot

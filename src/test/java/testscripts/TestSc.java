@@ -3,12 +3,14 @@ package testscripts;
 import java.awt.AWTException;
 import java.io.IOException;
 
+import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import basescripts.BaseBrowser;
+import basescripts.BaseCredential;
 import basescripts.BaseLibrary;
 import basescripts.BaseProperties;
 import basescripts.BaseReport;
@@ -40,21 +42,28 @@ public class TestSc {
 		BaseBrowser.tearDown();
 	}
 	@Test
-	public void testSc()throws Exception {
-		ScreenLogin.login(testDriver, "user1", "user2", testName);
+//	public void testSc()throws Exception {
+//		ScreenLogin.login(testDriver, "user1", "user2", testName);
+//		
+//		ScreenLanding.navigateTo(testDriver, "URLNAME", testName);
+//		ScreenLanding.openNewWebsite(testDriver, "SCREENLANDING", testName);
+//		//Next Screen after Landing eg.
+//		//ScreenInsert.pageInformation(testDriver, "startWorkFlow", "SCREEN_INSERT...", testName);
+//		//ScreenInsert.setWorkflowPopupLayer(testDriver, "unlock", "SCRE...", testName);
+//		
+//		ScreenLanding.createCSVExport(testDriver, testName);
+//		ScreenLanding.sClick(testDriver, "SCREENLANDING...", "noScroll", testName);
+//		ScreenCSVExport.checkScreenElements(testDriver, testName);
+//		
+//		BaseReport.createaemReportSeparator();
+//		BaseReport.softAssertion.assertAll();
+//	}
+	public void pass()throws Exception {
 		
-		ScreenLanding.navigateTo(testDriver, "URLNAME", testName);
-		ScreenLanding.openNewWebsite(testDriver, "SCREENLANDING", testName);
-		//Next Screen after Landing eg.
-		//ScreenInsert.pageInformation(testDriver, "startWorkFlow", "SCREEN_INSERT...", testName);
-		//ScreenInsert.setWorkflowPopupLayer(testDriver, "unlock", "SCREEN_...", testName);
+			String cred = "Annegret";
+			
+			String cryptedString = Base64.encodeBase64String(cred.getBytes());
+			System.out.println(cryptedString);
 		
-		ScreenLanding.createCSVExport(testDriver, testName);
-		ScreenLanding.sClick(testDriver, "SCREENLANDING...", "noScroll", testName);
-		ScreenCSVExport.checkScreenElements(testDriver, testName);
-		
-		BaseReport.createaemReportSeparator();
-		BaseReport.softAssertion.assertAll();
 	}
-
 }

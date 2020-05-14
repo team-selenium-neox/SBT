@@ -32,8 +32,8 @@ public class BaseCredential {
 		
 	}
 	
-	public void encodeCredential() throws IOException, InterruptedException, AWTException {
-		String cred = "xxxx";
+	public void  encodeCredential() throws IOException, InterruptedException, AWTException {
+		String cred = "Annegret";
 		
 		String cryptedString = Base64.encodeBase64String(cred.getBytes());
 		System.out.println(cryptedString);
