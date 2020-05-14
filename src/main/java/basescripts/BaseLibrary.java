@@ -290,7 +290,7 @@ public static WebElement fluentWaitforElement(WebDriver testDriver, WebElement e
  * checks the content of tables
  * 
  * */
-public static String getTableContend(WebDriver testDriver, String tableClassName, String searchString) throws IOException {
+public static String getTableContent(WebDriver testDriver, String tableClassName, String searchString) throws IOException {
 	
 	String tdContent = null;
 	
