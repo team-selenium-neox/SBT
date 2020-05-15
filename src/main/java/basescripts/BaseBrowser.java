@@ -44,19 +44,19 @@ public class BaseBrowser {
 				BaseBrowserSetupIE.ieSetup();
 			}
 			if (browser.equalsIgnoreCase("gecko") || browser.equalsIgnoreCase("chrome") || browser.equalsIgnoreCase("chromeSeleniumGrid")) {
-				if (env.equalsIgnoreCase("PAGENAME1")) { // PAGENAME needs to be changed under config.properties-->targetEnv 
-					startURL = proper.getPropValue(configFile, "TESTURL1"); //TESTURL needs to be changed under config.properties-->testUrl
-				}else if (env.equalsIgnoreCase("PAGENAME2")) {
-					startURL = proper.getPropValue(configFile, "TESTURL2");
+				if (env.equalsIgnoreCase("live")) { // PAGENAME needs to be changed under config.properties-->targetEnv 
+					startURL = proper.getPropValue(configFile, "testUrl1"); //TESTURL needs to be changed under config.properties-->testUrl
+				}else if (env.equalsIgnoreCase("stage")) {
+					startURL = proper.getPropValue(configFile, "testUrl2");
 				}else {
 					
 				}
 				
 			}else if (browser.equalsIgnoreCase("ie")) {
-				if(env.equalsIgnoreCase("PAGENAME1")) {
-					startURL = proper.getPropValue(configFile, "TESTURL1");
-				}else if (env.equalsIgnoreCase("PAGENAME2")) {
-					startURL = proper.getPropValue(configFile, "TESTURL2");
+				if(env.equalsIgnoreCase("live")) {
+					startURL = proper.getPropValue(configFile, "testUrl1");
+				}else if (env.equalsIgnoreCase("stage")) {
+					startURL = proper.getPropValue(configFile, "testUrl2");
 				}else {
 					
 				}
