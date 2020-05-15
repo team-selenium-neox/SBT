@@ -13,7 +13,7 @@ public class BaseBrowserSetupChrome extends BaseBrowser {
 	public static void chromeSetup() throws IOException {		
 		
 		String chromeDriverPath = "";
-		chromeDriverPath = BaseReport.browserDriverPath + "chromeDriver.exe";
+		chromeDriverPath = BaseReport.browserDriverPath + "chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 		
 		String downloadFilepath = "";

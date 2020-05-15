@@ -13,7 +13,7 @@ public class BaseProperties {
 	
 	public String getPropValue(String properfile, String keyName) throws IOException {
 		
-		String rootPath = Stream.of(System.getProperty("user.dir"), "scr", "main", "recources")
+		String rootPath = Stream.of(System.getProperty("user.dir"), "src", "main", "recources")
 				.collect(Collectors.joining(File.separator));
 		
 		String propFilePath = rootPath + File.separator + properfile;

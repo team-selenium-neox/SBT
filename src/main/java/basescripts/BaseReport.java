@@ -16,7 +16,7 @@ import org.testng.asserts.SoftAssert;
 
 public class BaseReport {
 	
-	public static String basePath = Stream.of("C:", "Benutzer", "RouxLoki", "Projekt Neox").collect(Collectors.joining(File.separator)) + File.separator;
+	public static String basePath = Stream.of("C:", "Users", "RouxLoki", "Projekt Neox").collect(Collectors.joining(File.separator)) + File.separator;
 	public static String browserDriverPath = Stream.of(System.getProperty("user.dir"), "BrowserDrivers").collect(Collectors.joining(File.separator)) +File.separator;
 	public static String pdfDownloadPath = Stream.of(System.getProperty("user.dir"), "aemReport", "downloadPDF").collect(Collectors.joining(File.separator)) + File.separator;
 	public static String aemReportPath = Stream.of(System.getProperty("user.dir"), "aemReport").collect(Collectors.joining(File.separator)) + File.separator;

@@ -25,9 +25,9 @@ public class ScreenLanding {
 		// Example Code
 		bl.checkText(testName, "if icon is visible / displayed", "true", bl.isIconDisplayed(testDriver, "xpath", properFileXpath, "screen_landing_header_logo", testName));
 		bl.checkText(testName, "if title is displayed correctly", prop.getPropValue(porperFileText, "screen_landing_header_title"), bl.getElementText(testDriver, "xpath", properFileXpath, "screen_landing_header_title", testName));
-		bl.checkText(testName, "if icon is visible / displayed", "true", bl.isIconDisplayed(testDriver, "xpath", properFileXpath, "screen_landing_header_search", testName));
-		bl.checkText(testName, "if icon is visible / displayed", "true", bl.isIconDisplayed(testDriver, "xpath", properFileXpath, "screen_landing_header_help", testName));
-		bl.checkText(testName, "if icon is visible / displayed", "true", bl.isIconDisplayed(testDriver, "xpath", properFileXpath, "screen_landing_header_solution", testName));
+//		bl.checkText(testName, "if icon is visible / displayed", "true", bl.isIconDisplayed(testDriver, "xpath", properFileXpath, "screen_landing_header_search", testName));
+//		bl.checkText(testName, "if icon is visible / displayed", "true", bl.isIconDisplayed(testDriver, "xpath", properFileXpath, "screen_landing_header_help", testName));
+//		bl.checkText(testName, "if icon is visible / displayed", "true", bl.isIconDisplayed(testDriver, "xpath", properFileXpath, "screen_landing_header_solution", testName));
 		
 		bl.checkText(testName, "if menu item is displayed correctly", prop.getPropValue(porperFileText, "screen_landing_navi_col1_item1"), bl.getElementText(testDriver, "xpath", properFileXpath, "screen_landing_navi_col1_item1", testName));
 	}
@@ -48,7 +48,7 @@ public class ScreenLanding {
 	}
 	
 	public static void navigateTo(WebDriver testDriver, String target, String testName) throws IOException, InterruptedException {
-		if (target.equalsIgnoreCase("NAME")) {
+		if (target.equalsIgnoreCase("Demo")) {
 			sClick(testDriver, "screen_landing_navi_col1_item1", "noScroll", testName);
 			sClick(testDriver, "screen_landing_navi_col1_col2_item1", "noScroll", testName);
 			//...
