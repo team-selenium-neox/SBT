@@ -36,10 +36,12 @@ public class TestNeox {
 	@Test
 	public void testNeox() throws Exception {
 		
-		NeoxPerform.checkScreenElements(testDriver, "screen_landing_header_title",testName);
-		//NeoxPerform.checkBlockText(testDriver, testName);
-		NeoxPerform.checkSlide(testDriver, "screen_landing_navi_arrow_buttonR", testName);
-		
+//		NeoxPerform.checkScreenElements(testDriver, "screen_landing_header_title",testName);
+//		NeoxPerform.checkBlockText(testDriver, testName);
+//		NeoxPerform.checkSlide(testDriver, "screen_landing_navi_arrow_buttonR", testName);
+		NeoxPerform.getCode();
+		NeoxPerform.getHeader(testDriver, testName);
+				
 		BaseReport.createaemReportSeparator();
 		BaseReport.softAssertion.assertAll();
 	}

@@ -8,6 +8,7 @@ import basescripts.BaseCredential;
 import basescripts.BaseLibrary;
 import basescripts.BaseProperties;
 
+
 public class ScreenLogin {
 	
 	public static String properFileXpath = "screen_login_xpath.properties";

@@ -321,7 +321,6 @@ public class BaseReport {
 				softAssertion.assertEquals(foundStr, expectedStr);
 				// ====FAIL====
 				failedCounter = failedCounter +1;
-				takeScreenshot("string_not_matched");
 				fw.write("<td class=\"aemCellRedNormal\" style=\"text-align:center;\">");
 				fw.write(mFailed);
 				fw.write("</td> \n");

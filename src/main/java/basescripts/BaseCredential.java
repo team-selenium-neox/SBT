@@ -5,6 +5,8 @@ import java.io.IOException;
 
 import org.apache.commons.codec.binary.Base64;
 
+import com.sun.tools.javac.Main;
+
 
 public class BaseCredential {
 	
@@ -32,8 +34,8 @@ public class BaseCredential {
 		
 	}
 	
-	public void  encodeCredential() throws IOException, InterruptedException, AWTException {
-		String cred = "XXXX";
+   public void encodeCredential() throws IOException, InterruptedException, AWTException {
+		String cred = "moonrider@retrozocker.de";
 		
 		String cryptedString = Base64.encodeBase64String(cred.getBytes());
 		System.out.println(cryptedString);
