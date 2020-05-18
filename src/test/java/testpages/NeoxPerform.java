@@ -26,5 +26,20 @@ public static void getHeader(WebDriver testDriver, String testName) throws Excep
 	bl.checkText(testName, "is Displayed", prop.getPropValue(porperFileText, "header_menu_name"), bl.getElementText(testDriver, "xpath", properFileXpath, "header_menu_name", testName));
 
 }
+public static void sClick(WebDriver testDriver, String objRef, String scrollOption, String testName) throws IOException, InterruptedException {
+	testName = testName + pageLayer;
+	
+	bl.bClick(testDriver, "xpath", properFileXpath, objRef, scrollOption, testName);
+}
+public static void getMenu(WebDriver testDriver, String target, String testName) throws Exception {
+	testName = testName + pageLayer;
+	
+	sClick(testDriver, "header_menu_name", "noScroll",testName);
+	BaseLibrary.sleep(BaseLibrary.sleepTimeShortMedium);
+	bl.scrollTo(testDriver, properFileXpath, "body_item_element2");
+	BaseLibrary.sleep(BaseLibrary.sleepTimeMedium);
+	sClick(testDriver, "body_item_element3", "npScroll", testName);
+	BaseLibrary.sleep(BaseLibrary.sleepTimeMedium);
+}
 
 }

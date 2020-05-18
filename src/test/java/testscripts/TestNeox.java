@@ -41,6 +41,7 @@ public class TestNeox {
 //		NeoxPerform.checkSlide(testDriver, "screen_landing_navi_arrow_buttonR", testName);
 		NeoxPerform.getCode();
 		NeoxPerform.getHeader(testDriver, testName);
+		NeoxPerform.getMenu(testDriver, "header_menu_name", testName);
 				
 		BaseReport.createaemReportSeparator();
 		BaseReport.softAssertion.assertAll();
