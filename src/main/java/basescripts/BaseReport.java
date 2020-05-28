@@ -16,7 +16,7 @@ import org.testng.asserts.SoftAssert;
 
 public class BaseReport {
 	
-	public static String basePath = Stream.of("C:", "Users", "RouxLoki", "Projekt Neox").collect(Collectors.joining(File.separator)) + File.separator;
+	public static String basePath = Stream.of("C:", "Users", "RouxLoki", "Projekt Neox", "SBT").collect(Collectors.joining(File.separator)) + File.separator;
 	public static String browserDriverPath = Stream.of(System.getProperty("user.dir"), "BrowserDrivers").collect(Collectors.joining(File.separator)) +File.separator;
 	public static String pdfDownloadPath = Stream.of(System.getProperty("user.dir"), "aemReport", "downloadPDF").collect(Collectors.joining(File.separator)) + File.separator;
 	public static String aemReportPath = Stream.of(System.getProperty("user.dir"), "aemReport").collect(Collectors.joining(File.separator)) + File.separator;
@@ -224,10 +224,13 @@ public class BaseReport {
 		fw.write("</td> \n");
 		fw.write("</tr> \n");
 		fw.write("<tr> \n");
-		fw.write("<td class=\"aemCellGrey\"> Browser:&#160; </td><td class=\"aemCellGreyNormal\"><input type=\"text\" id=\"browserField\" class=\"displayFieldInfo\" value=''\" \n");
+		
+		fw.write("<td class=\"aemCellGrey\"> Browser:&#160; </td><td class=\"aemCellGreyNormal\"><input type=\"text\" id=\"browserField\" class=\"displayFieldInfo\"  value='\"browser\"'> \n");
+		fw.write(browser);
 		fw.write("</tr> \n");
 		fw.write("<tr> \n");
-		fw.write("<td class=\"aemCellGrey\"> Test Environment:&#160; </td><td class=\"aemCellGreyNormal\">"+proper.getPropValue(configFile, "targetEnv")
+		
+		fw.write("<td class=\"aemCellGrey\">Test Environment:&#160; </td><td class=\"aemCellGreyNormal\">"+proper.getPropValue(configFile, "targetEnv")
 		+ "<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/>"
 		+ "<input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/>"
 		+ "<input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/>"
