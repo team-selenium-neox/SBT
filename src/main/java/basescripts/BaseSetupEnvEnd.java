@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class BaseSetupEnvEnd {
 
 	@Test(priority=1)
-	public void createaemReportClose() throws IOException, InterruptedException {
+	public  void createaemReportClose() throws IOException, InterruptedException {
 		BaseReport.createaemReportFooter();
 	}
 	
@@ -29,5 +29,10 @@ public class BaseSetupEnvEnd {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	public static void cClose(String cCount1) throws IOException, InterruptedException {
+		//Integer cCount = null;
+		//return BaseReport.checkedCount(cCount.toString());
+		
 	}
 }

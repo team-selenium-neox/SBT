@@ -19,13 +19,13 @@ public class BaseSetupEnvStart {
 		targetLoc1 = BaseReport.aemReportPath + "screenshots_" + BaseReport.getDate("SDF2");
 		
 		File dir1 = new File(sourceLoc1);
-		File newName = new File(targetLoc1);
+		File newName1 = new File(targetLoc1);
 		
 		if (dir1.isDirectory()) {
-			dir1.renameTo(newName);
+			dir1.renameTo(newName1);
 		}else {
 			dir1.mkdir();
-			dir1.renameTo(newName);
+			dir1.renameTo(newName1);
 		}
 		dir1.mkdir();
 		

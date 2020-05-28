@@ -1,0 +1,6034 @@
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 08:58:47<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','08:58:47','08:59:07','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:01:06<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:01:06','09:01:34','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:22:03<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:22:03','09:22:22','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:23:00<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:23:00','09:23:20','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:24:46<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:24:46','09:25:05','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:26:18<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:26:18','09:26:39','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:30:04<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:30:04','09:30:23','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:39:42<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:39:42','09:40:02','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:45:33<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:45:33','09:45:53','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:51:02<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:51:02','09:51:22','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:53:23<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:53:23','09:53:43','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:56:37<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:56:37','09:56:58','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:58:01<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:58:01','09:58:21','</scripts>
+
+</div></form>
+</body>
+</html>
+<html>
+<head>
+<title>AEM</title>
+<style>
+<!--
+a:link {color:#ffffff;}
+a:visited {color:#000000;}
+a:active {color:#ffffff;}
+body {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.fixed {
+table-layout:fixed; width:1100px; word-break:break-all;
+}
+
+table.fixed {
+overflow:hidden; {
+}
+
+.aemCellBlue {
+font-weight:bold; 
+background-color: #08298A; 
+color: #ffffff; 
+font-size: 12px; 
+}
+
+.aemCellYellow {
+font-weight:bold; 
+background-color: #FFFF99; 
+font-size: 12px; 
+}
+
+.aemCellGrey {
+font-weight:bold; 
+background-color: #E8E8E8; 
+font-size: 12px; 
+}
+
+.aemCellGreyNormal {
+font-weight:normal; 
+background-color: #E8E8E8; 
+width; 800px 
+font-size: 12px; 
+}
+
+.aemCellWhite {
+font-weight:bold; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellWhiteNormal {
+font-weight:normal; 
+background-color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellGreen {
+font-weight:bold; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellGreenNormal {
+font-weight:normal; 
+background-color: #33FF00; 
+font-size: 12px; 
+}
+
+.aemCellRed {
+font-weight:bold; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.aemCellRedNormal {
+font-weight:normal; 
+background-color: #FF0000; 
+color: #FFFFFF; 
+font-size: 12px; 
+}
+
+.displayField {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:1px solid: #E8E8E8; 
+width; 40px 
+font-size: 13px; 
+color: #08298A; 
+text-align: center; 
+}
+
+.displayFieldInfo {
+font-weight:bold; 
+background-color: #E8E8E8; 
+border:0px solid: #E8E8E8; 
+width; 110px 
+font-size: 13px; 
+color: #000000; 
+text-align: left; 
+}
+
+--> 
+</style> 
+<script> 
+function setValue(c,p,f,b,v,s,e) {
+document.getElementById("cField").value=c; 
+document.getElementById("pField").value=p; 
+document.getElementById("fField").value=f; 
+document.getElementById("browserField").value=b; 
+document.getElementById("versionField").value=v; 
+document.getElementById("startTime").value=s; 
+document.getElementById("endTime").value=e; 
+}
+</script> 
+</head>
+<body>
+<form name="myForm>" 
+<div style = "position:absolute; left:5px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<table width="1102"> 
+<tr> 
+<td colspan="2" class="aemCellGrey" style="color:#0829A8; font-size:20px;">SBT-Report</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Short Description:&#160; </td><td class="aemCellGreyNormal">SBT-Report-Regression-Test 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px;">Checks:   
+<script>checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)0</script></td></tr> 
+<tr> 
+<td class="aemCellGrey"> Execution Date:&#160; </td><td class="aemCellGreyNormal"> 
+28.05.2020 09:59:46<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: green">Passed: 
+0</td></td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Test Object:&#160; </td><td class="aemCellGreyNormal">SBT Test</td> 
+<td class="aemCellGrey" width="0" style="color:#08298A; font-size:18px; color: red">Failed :&#160 
+0</td></tr> 
+<tr> 
+<td class="aemCellGrey"> OS System:&#160; </td><td class="aemCellGreyNormal"> 
+Windows 10</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> JDK:&#160; </td><td class="aemCellGreyNormal"> 
+12.0.1+12</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey"> Browser:&#160; </td><td class="aemCellGreyNormal"> 
+chrome Version: 81.0.4044.138</tr> 
+<tr> 
+<td class="aemCellGrey">Test Environment:&#160; </td><td class="aemCellGreyNormal">live<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/><input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/><input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/><input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/><input type='text' id='endTime' class='displayFieldInfo' value=''  readonly /></td>
+</tr> 
+</table> 
+<table width="1102">
+<tr> 
+</tr> 
+</table> 
+</div>
+<br/>
+<div style = "position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8"> 
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;is Displayed</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal">SELENIUM TEST WORKING GROUND</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_button4</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_side_entry1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-1</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-2</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<table border="1" class="fixed">
+<col width="289px"/>
+<col width="289px"/>
+<col width="70px"/>
+<col width="100px"/>
+<col width="355px"/>
+<tr> 
+<td class="aemCellBlue" colspan="5">TestSBT SBTPerform</td> 
+</tr> 
+<tr> 
+<td class="aemCellYellow" colspan="5">Check:&#160;nav_sub_button1-3</td> 
+</tr> 
+<tr> 
+<td class="aemCellGrey">Target State</td>
+<td class="aemCellGrey">Current State</td>
+<td class="aemCellGrey" style="text-align:center;"> State</td>
+<td class="aemCellGrey" style="text-align:center;"> Screenshot </td>
+<td class="aemCellGrey"> Error Msg</td>
+</tr> 
+<tr> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal">true</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;">PASSED</td> 
+<td class="aemCellWhiteNormal" style="text-align:center;"> </td>
+<td class="aemCellWhiteNormal"></td> 
+</tr> 
+</table>
+
+<hr-witdth="1106" align="left" style="border:solid #2EFEF7 5px;" />
+
+
+
+<scripts>setValue(9,9,0,'chrome','81.0.4044.138','09:59:46','10:00:05','</scripts>
+
+</div></form>
+</body>
+</html>

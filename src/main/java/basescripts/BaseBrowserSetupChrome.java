@@ -33,6 +33,9 @@ public class BaseBrowserSetupChrome extends BaseBrowser {
 		HashMap<String, Object> plugin = new HashMap<String, Object>();
 		plugin.put("enabled", false);
 		plugin.put("name", "Chrome PDF Viewer");
+		plugin.put("name", "pdfjs.disabled");
+		plugin.put("name", "settings-pdf-documents");
+		plugin.put("plugins.always_open_pdf_externally", true);
 		HashMap<String, Object> prefs = new HashMap<String, Object>();
 		prefs.put("plugins.plugins_list", Arrays.asList(plugin));
 		prefs.put("profile.default_content_settings.popups", 0);

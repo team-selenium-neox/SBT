@@ -44,7 +44,7 @@ public class BaseBrowserSetupGecko extends BaseBrowser {
 		String geckoDriverPath = "";
 		
 		if (proper.getPropValue(configFile, "ENV").equalsIgnoreCase("no")) {
-			geckoDriverPath = BaseReport.basePath + BaseReport.browserDriverPath +"geckoDriver.exe";
+			geckoDriverPath = BaseReport.basePath + BaseReport.browserDriverPath +"geckodriver.exe";
 		} else {
 			// This "else" is only used if you try to use another environment which is not standard
 			//geckoDriverPath = BaseReport.basePath + BaseReport.browserDriverPathENV +"geckoDriver.exe";

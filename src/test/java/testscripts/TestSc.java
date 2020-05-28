@@ -42,17 +42,17 @@ public class TestSc {
 	}
 	@Test
 	public void testSc()throws Exception {
-		ScreenLogin.login(testDriver, "user1", "user2", testName);
+		//ScreenLogin.login(testDriver, "user1", "user2", testName);
 		
 		ScreenLanding.navigateTo(testDriver, "landing_text", testName);
-		ScreenLanding.openNewWebsite(testDriver, "landing_text", testName);
+		//ScreenLanding.openNewWebsite(testDriver, "landing_text", testName);
 		//Next Screen after Landing eg.
 		//ScreenInsert.pageInformation(testDriver, "startWorkFlow", "SCREEN_INSERT...", testName);
 		//ScreenInsert.setWorkflowPopupLayer(testDriver, "unlock", "SCRE...", testName);
 		
-		ScreenLanding.createCSVExport(testDriver, testName);
+		//ScreenLanding.createCSVExport(testDriver, testName);
 		ScreenLanding.sClick(testDriver, "SCREENLANDING...", "noScroll", testName);
-		ScreenCSVExport.checkScreenElements(testDriver, testName);
+		//ScreenCSVExport.checkScreenElements(testDriver, testName);
 		
 		BaseReport.createaemReportSeparator();
 		BaseReport.softAssertion.assertAll();

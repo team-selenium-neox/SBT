@@ -14,7 +14,7 @@ public class NeoxPerform {
 	public static BaseLibrary bl = new BaseLibrary();
 	public static BaseProperties prop = new BaseProperties();
 	public static BaseCredential cred = new BaseCredential();
-	public static String pageLayer = "NeoxPerform";
+	public static String pageLayer = " NeoxPerform";
 	public static String handle = null;
 
 public static void getCode() throws Exception {
@@ -34,8 +34,12 @@ public static void sClick(WebDriver testDriver, String objRef, String scrollOpti
 public static void getMenu(WebDriver testDriver, String target, String testName) throws Exception {
 	testName = testName + pageLayer;
 	
+	bl.checkText(testName, "Click Button Right", "true", bl.isIconDisplayed(testDriver, "xpath", properFileXpath, "header_menu_name", testName));
 	sClick(testDriver, "header_menu_name", "noScroll",testName);
 	BaseLibrary.sleep(BaseLibrary.sleepTimeShortMedium);
+
+}
+public static void getSlide(WebDriver testDriver, String target, String testName) throws Exception {
 	bl.scrollTo(testDriver, properFileXpath, "body_item_element2");
 	BaseLibrary.sleep(BaseLibrary.sleepTimeMedium);
 	sClick(testDriver, "body_item_element3", "npScroll", testName);
