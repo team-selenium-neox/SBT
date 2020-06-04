@@ -1,5 +1,6 @@
 package testpages;
 
+import java.io.File;
 import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import basescripts.BaseCredential;
 import basescripts.BaseLibrary;
 import basescripts.BaseProperties;
+import basescripts.BaseReport;
 import basescripts.BaseRobot;
 
 public class SBTPerform {
@@ -21,6 +23,7 @@ public class SBTPerform {
 	public static BaseRobot rob = new BaseRobot();
 	public static String pageLayer = " SBTPerform";
 	public static String handle = null;
+	public static String configFile = "config.properties";
 
 public static void getCode() throws Exception {
 	
@@ -70,10 +73,13 @@ public static void getMenu(WebDriver testDriver, String target, String testName)
 	bl.checkText(testName, "nav_sub_button1-3", "true", bl.isIconDisplayed(testDriver, "xpath", properFileXpath, "nav_sub_button1-3", testName));
 	
 	BaseLibrary.sleep(BaseLibrary.sleepTimeMedium);
-
+	
+	sClick(testDriver, "nav_button4", "noScroll", testName);
+	bl.checkText(testName, "ist Abraxas", "false", bl.isIconDisplayed(testDriver, "xpath", properFileXpath, "nav_block", testName));
+    System.out.println(BaseReport.screenshotFileLink);
 }
 
-public static void getPDF(WebDriver testDriver, String testName) throws Exception {
+public static void getPDF(WebDriver testDriver, String target, String testName) throws Exception {
 	
 	Actions hover = new Actions(testDriver);
 	WebElement Elem_to_hover = testDriver.findElement(By.id("menu-item-59"));
@@ -88,11 +94,13 @@ public static void getPDF(WebDriver testDriver, String testName) throws Exceptio
 	
 	
 	sClick(testDriver, "nav_dlb_pdf", "noScroll", testName);
-	//bl.getPdfText();
-	//bl.ReadPDF();
+	BaseLibrary.sleep(BaseLibrary.sleepTimeLong);
+	BaseLibrary.sleep(BaseLibrary.sleepTimeLong);
+	bl.checkText(testName, "Text ist enthalten", prop.getPropValue(configFile, "pdfCheck"), bl.ReadPDF("JAVA") );
+
 	
-	BaseLibrary.sleep(BaseLibrary.sleepTimeLong);
-	BaseLibrary.sleep(BaseLibrary.sleepTimeLong);
+	
+
 	
 }
 //public static void getSlide(WebDriver testDriver, String target, String testName) throws Exception {

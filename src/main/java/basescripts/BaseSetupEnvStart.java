@@ -11,12 +11,14 @@ import org.testng.annotations.Test;
 public class BaseSetupEnvStart {
 	
 	@Test(priority=1)
-	public void createReportFolder() throws IOException, InterruptedException {
+	public static void createReportFolder() throws IOException, InterruptedException {
 		String sourceLoc1 = "";
 		String targetLoc1 = "";
+		String Date1 = "";
+		Date1 = new String(BaseReport.getDate("SDF2"));
 		
 		sourceLoc1 = BaseReport.aemReportPath + "screenshots";
-		targetLoc1 = BaseReport.aemReportPath + "screenshots_" + BaseReport.getDate("SDF2");
+		targetLoc1 = BaseReport.aemReportPath + "screenshots_" + Date1 ;
 		
 		File dir1 = new File(sourceLoc1);
 		File newName1 = new File(targetLoc1);
@@ -30,20 +32,36 @@ public class BaseSetupEnvStart {
 		dir1.mkdir();
 		
 		
-		String sourceLocation = "";
-		sourceLocation = BaseReport.pdfDownloadPath;
+		String sourceLocation1 = "";
+		sourceLocation1 = BaseReport.pdfDownloadPath;
 		
-		File source = new File(sourceLocation);
+		String sourceLocation2 = "";
+		sourceLocation2 =BaseReport.aemReportPath + "screenshots";
+		
+		File source1 = new File(sourceLocation1);
+		File source2 = new File(sourceLocation2);
 		File dest = new File(targetLoc1);
 		
 		try {
-			FileUtils.copyDirectory(source, dest);
+			FileUtils.copyDirectory(source1, dest);
 			System.out.println("****************************************************************");
-			System.out.println("******INFO: BACKUP COPY SUCCESSFUL******************************");
+			System.out.println("******INFO: PDF BACKUP COPY SUCCESSFUL**************************");
 			System.out.println("****************************************************************");
 		}catch (IOException e) {
 			System.out.println("****************************************************************");
-			System.out.println("******INFO: BACKUP COPY FAILED *********************************");
+			System.out.println("******INFO: PDF BACKUP COPY FAILED *****************************");
+			System.out.println("****************************************************************");
+			e.printStackTrace();
+		}
+		
+		try {
+			FileUtils.copyDirectory(source2, dest);
+			System.out.println("****************************************************************");
+			System.out.println("******INFO: REPORT BACKUP COPY SUCCESSFUL***********************");
+			System.out.println("****************************************************************");
+		}catch (IOException e) {
+			System.out.println("****************************************************************");
+			System.out.println("******INFO: REPORT BACKUP COPY FAILED **************************");
 			System.out.println("****************************************************************");
 			e.printStackTrace();
 		}

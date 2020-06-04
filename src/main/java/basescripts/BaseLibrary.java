@@ -1,5 +1,6 @@
 package basescripts;
 
+import java.awt.AWTException;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +10,8 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-
+import org.apache.pdfbox.io.RandomAccessBufferedFileInputStream;
+import org.apache.pdfbox.io.RandomAccessFile;
 import org.apache.pdfbox.io.RandomAccessRead;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -43,6 +45,10 @@ public static final Integer sleepTimeVeryLong=6000;
 
 public static BaseProperties proper = new BaseProperties();
 public static String searchResultCounter = null;
+
+public static String configFile = "config.properties";
+public static String pdf = "";
+public static String pdfURL = "";
 
 
 /** 
@@ -358,29 +364,32 @@ public static void sleep(Integer timer) throws InterruptedException {
 	Thread.sleep(timer);
 }
 
-public void getPdfText () throws Exception {
-
-	String fileName = "file:///C:/Users/RouxLoki/Projekt%20Neox/SBT/aemReport/downloadPDF/JavaCheatSheet.pdf";
-	
-	URL TestURL = new URL(fileName);
-	//TestURL = PDDocument.load(new File(fileName));
-
-	PDFTextStripper tText= new PDFTextStripper();
-
-	//Assert.assertTrue(Ttext.contains("Java"));
-
-
+public static String getPDF() {
+	return pdf;
 }
-public void ReadPDF() throws Exception {
+
+public static String getpdfURL() {
+	return pdfURL;
+}
+
+
+
+public String ReadPDF(String foundStr) throws IOException , InterruptedException, AWTException{
 	
-	URL TestURL = new URL("file:///C:/Users/RouxLoki/Projekt%20Neox/SBT/aemReport/downloadPDF/JavaCheatSheet.pdf");
-	BufferedInputStream TestFile = new BufferedInputStream(TestURL.openStream());
+	pdf = proper.getPropValue(configFile, "PDFName");
+	pdfURL = proper.getPropValue(configFile, "PDFurl");
+	URL TestURL = new URL(pdfURL +  pdf);
+	RandomAccessBufferedFileInputStream TestFile = new RandomAccessBufferedFileInputStream(TestURL.openStream());
 	PDFParser TestPDF = new PDFParser((RandomAccessRead) TestFile);
 	TestPDF.parse();
 	String TestText = new PDFTextStripper().getText(TestPDF.getPDDocument());
 
-	Assert.assertTrue(TestText.contains("Java"));
+	Assert.assertTrue(TestText.contains(foundStr));
+	
+	return foundStr;
+	
+	
 
-}
+	}
 
 }

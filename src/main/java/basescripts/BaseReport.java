@@ -3,27 +3,16 @@ package basescripts;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.StringReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.apache.http.impl.conn.tsccm.WaitingThread;
 import org.apache.maven.shared.utils.io.FileUtils;
-import org.apache.poi.ss.formula.functions.Count;
-import org.apache.poi.ss.formula.functions.LinearRegressionFunction.FUNCTION;
-import org.apache.poi.ss.formula.functions.Replace;
-import org.apache.poi.xwpf.usermodel.Document;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Wait;
 import org.testng.asserts.SoftAssert;
-import org.testng.reporters.jq.Main;
-
-import com.microsoft.schemas.office.visio.x2012.main.PagesType;
 
 
 
@@ -41,7 +30,6 @@ public class BaseReport {
 	public static Integer checkedCounter = 0;
 	public static Integer passedCounter = 0;
 	public static Integer failedCounter = 0;
-	public static Integer cCount = 0;
 	public static String screenshotFile = "";
 	public static String screenshotFileLink = "";
 	public static String errMsg1 = "Searched String does not match!";
@@ -59,7 +47,7 @@ public class BaseReport {
 	
 	private static final SimpleDateFormat SDF1 = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss"); // Timestamp for Report
 	private static final SimpleDateFormat SDF2 = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss"); // Timestamp for Error screenshot
-	
+	private static final SimpleDateFormat SDF3 = new SimpleDateFormat("dd.MM.yyyy");
 	
 	/** 
 	 * 
@@ -222,17 +210,12 @@ public class BaseReport {
 		fw.write("<tr> \n");
 		fw.write("<td class=\"aemCellGrey\"> Short Description:&#160; </td><td class=\"aemCellGreyNormal\">SBT-Report-Regression-Test \n");
 		fw.write("<td class=\"aemCellGrey\" width=\"0\" style=\"color:#08298A; font-size:18px;\">Checks:   \n");
-		
-		fw.write("<script>");
-		fw.write("checkedCounter.insertAdjacentHTML('afterend',  checkedCounter)" + checkedCounter);
-		//fw.write("" + checkedCounter);
-		fw.write("</script>");
-		
+		fw.write("" + checkedCounter);
 		fw.write("</td>");
 		fw.write("</tr> \n");
 		fw.write("<tr> \n");
 		fw.write("<td class=\"aemCellGrey\"> Execution Date:&#160; </td><td class=\"aemCellGreyNormal\"> \n");
-		fw.write(currentDate);
+		fw.write(getDateMini("SDF3"));
 		fw.write("<td class=\"aemCellGrey\" width=\"0\" style=\"color:#08298A; font-size:18px; color: green\">Passed: \n");
 		fw.write("" + passedCounter);
 		fw.write("</td>");
@@ -261,13 +244,19 @@ public class BaseReport {
 		fw.write("</tr> \n");
 		fw.write("<tr> \n");
 		
-		fw.write("<td class=\"aemCellGrey\">Test Environment:&#160; </td><td class=\"aemCellGreyNormal\">"+proper.getPropValue(configFile, "targetEnv")
-		+ "<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/>"
-		+ "<input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/>"
-		+ "<input type='text' id='startTime' class='displayFieldInfo' value='' readonly style='width:98px;'/>"
-		+ "<input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/>"
-		+ "<input type='text' id='endTime' class='displayFieldInfo' value=''  readonly />"
-		+ "</td>\n");
+		fw.write("<td class=\"aemCellGrey\">Test Environment:&#160; </td><td class=\"aemCellGreyNormal\">"+proper.getPropValue(configFile, "targetEnv"));
+		fw.write("<td class=\"aemCellGrey\"> Start-Time:&#160; </td><td class=\"aemCellGreyNormal\"> \n");
+		fw.write(startTime);
+		fw.write("<td class=\"aemCellGrey\"> End-Time:&#160; </td><td class=\"aemCellGreyNormal\"> \n");
+		fw.write(endTime);
+		
+//		fw.write("<td class=\"aemCellGrey\">Test Environment:&#160; </td><td class=\"aemCellGreyNormal\">"+proper.getPropValue(configFile, "targetEnv")
+//		+ "<input type='text' id='spacer' class='displayFieldInfo' value='' readonly style='width:252px;'/>"
+//		+ "<input type='text' id='startTimeLabel' class='displayFieldInfo' value='Start-Time' readonly style='width:70px;'/>"
+//		+ "<input type='text' id='startTime' class='displayFieldInfo' value=\"startTime\" readonly style='width:98px;'/>"
+//		+ "<input type='text' id='endTimeLabel' class='displayFieldInfo' value='End-Time' readonly style='width:65px;'/>"
+//		+ "<input type='text' id='endTime' class='displayFieldInfo' value=''  readonly />"
+//		+ "</td>\n");
 		
 		fw.write("</tr> \n");
 		fw.write("</table> \n");
@@ -283,7 +272,7 @@ public class BaseReport {
 		
 		fw.write("</div>\n");
 		fw.write("<br/>\n");
-		fw.write("<div style = \"position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 225px; background-color: #e8e8e8\"> \n");
+		fw.write("<div style = \"position:absolute; left:-1px; padding:5px; spacing:5px; boarder: 1px solid #08298A; width: 1115px; height: 0px; background-color: #e8e8e8\"> \n");
 		fw.close();
 		
 		startTime = getDate("SDF1").substring(11);
@@ -340,47 +329,54 @@ public class BaseReport {
 		fw.write(foundStr);
 		fw.write("</td> \n");
 		
+		
 		if(!foundStr.isEmpty()) {
 			if (expectedStr.equals(foundStr)) {
 				softAssertion.assertEquals(foundStr, expectedStr);
 				// ====PASSED====
 				passedCounter = passedCounter +1;
-				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\">");
+				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\" >");
 				fw.write(mPassed);
 				fw.write("</td> \n");
-				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\"> </td>\n");
-				fw.write("<td class=\"aemCellWhiteNormal\">");
+				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\"> \n");
+				fw.write("<td class=\"aemCellWhiteNormal\";>");
 				fw.write(errMsg);
 				fw.write("</td> \n");
 			}else {
 				softAssertion.assertEquals(foundStr, expectedStr);
 				// ====FAIL====
 				failedCounter = failedCounter +1;
-				fw.write("<td class=\"aemCellRedNormal\" style=\"text-align:center;\">");
+				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;>");
 				fw.write(mFailed);
 				fw.write("</td> \n");
-				fw.write("<td class=\"aemCellRedNormal\" style=\"text-align:center;\"><A TARGET =\"_blank\" HREF=\"");
-				fw.write(screenshotFileLink);
-				//fw.write(BaseReport.takeScreenshot(screenshotFileLink.toString()));
-				fw.write("\">Screenshot</A></td>\n");
-				fw.write("<td class=\"aemCellRedNormal\">");
+				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\">\n");
+				fw.write(mFailed);
+				fw.write("</td> \n");
+				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\"><A TARGET =\"_blank\" HREF=\"");
+				fw.write( takeScreenshot(screenshotFileLink) + "\">Screenshot</A></td>\n");
+				fw.write("<td class=\"aemCellWhiteNormal\">");
 				fw.write(errMsg1);
 				fw.write("</td> \n");
 			}
 		}else {
 			failedCounter = failedCounter +1;
-			fw.write("<td class=\"aemCellRedNormal\" style=\"text-align:center;\">");
+			fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\">");
 			fw.write(mFailed);
-			fw.write("<td class=\"aemCellRedNormal\" style=\"text-align:center;\"><A TARGET =\"_blank\" HREF=\"");
-			fw.write(screenshotFileLink);
-			fw.write("\">Screenshot</A></td>\n");
-			fw.write("<td class=\"aemCellRedNormal\">");
+			fw.write("</td> \n");
+			fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\"> \n");
+			fw.write(mFailed);
+			fw.write("</td> \n");
+			fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\"><A TARGET =\"_blank\" HREF=\"");
+			fw.write(takeScreenshot(screenshotFileLink) + "\">Screenshot</A></td>\n");
+			fw.write("<td class=\"aemCellWhiteNormal\">");
 			fw.write(errMsg1);
 			fw.write("</td> \n");
 		}
+		
 		fw.write("</tr> \n");
 		fw.write("</table>\n");
 		fw.write("\n");
+		
 		
 		fw.close();
 	}
@@ -410,7 +406,7 @@ public class BaseReport {
 		fw.write("</html>\n");
 	
 
-		fw.close();		
+		fw.close();	
 
 
 	}
@@ -438,6 +434,17 @@ public class BaseReport {
 		return myDate;
 	}
 	
+	public static String getDateMini(String format) throws IOException {
+		String myDate1 = "";
+		
+		if (format.equalsIgnoreCase("SDF1")) {
+			myDate1 = SDF1.format(new Date());
+		}else {
+			myDate1 = SDF3.format(new Date());
+		}
+		return myDate1;
+	}
+	
 	public static void setReportName(String reportValue) throws IOException {
 		reportName = reportValue;
 	}
@@ -445,9 +452,10 @@ public class BaseReport {
 	/** 
 	 * 
 	 * takes fail screenshots
+	 * @return 
 	 * 
 	 * */
-	public static void takeScreenshot(String myTestName) throws IOException {
+	public static String takeScreenshot(String myTestName) throws IOException {
 		
 		WebDriver driver = BaseBrowser.getDriver();
 		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -455,35 +463,17 @@ public class BaseReport {
 		String filePath = "";
 		
 		filePath = aemReportPath + "screenshots" + File.separator;
-		BaseReport.screenshotFile = filePath + myTestName + "_" + BaseReport.getDate("SDF2") + ".png";
-		BaseReport.screenshotFileLink = myTestName + "_" + BaseReport.getDate("SDF2") + ".png";
-		FileUtils.copyFile(srcFile, new File(BaseReport.screenshotFile));		
+		//BaseReport.screenshotFile = filePath + myTestName + "_" + BaseReport.getDate("SDF2") + ".png";
+		BaseReport.screenshotFile = filePath + myTestName + "_" + ".png";
+		//BaseReport.screenshotFileLink = myTestName + "_" + BaseReport.getDate("SDF2") + ".png";
+		BaseReport.screenshotFileLink = myTestName + "_" + ".png";
+		FileUtils.copyFile(srcFile, new File(BaseReport.screenshotFile));
+		return screenshotFileLink ;	
+
+		
+		
 	}
 	
-	public static String CResults(String checkedCounter2) throws IOException {
-		
-		String fileName = "";
-		
-		fileName = aemReportPath + "screenshots" + File.separator + reportName;
-		
-		FileWriter fw = new FileWriter(fileName, true);
-		endTime = getDate("SDF1").substring(11);
-		
-		fw.write("<scripts>");
-		if (proper.getPropValue(configFile, "chromeHeadless").equalsIgnoreCase("true")) {
-			fw.write("" + checkedCounter);
-		} else {
-			fw.write("" + checkedCounter);
-		}
-		fw.write("</scripts>");
-
-	
-
-		fw.close();
-		return checkedCounter2;		
-
-
-	}
 	
 	
 }

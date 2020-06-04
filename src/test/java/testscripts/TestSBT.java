@@ -13,6 +13,7 @@ import basescripts.BaseLibrary;
 import basescripts.BaseProperties;
 import basescripts.BaseReport;
 import basescripts.BaseRobot;
+import basescripts.BaseSetupEnvStart;
 import testpages.SBTPerform;
 
 public class TestSBT {
@@ -28,7 +29,9 @@ public class TestSBT {
 	public void startBrowser() throws IOException, InterruptedException, AWTException {
 		BaseBrowser.initBrowser();
 		testDriver = BaseBrowser.getDriver();	
+		BaseSetupEnvStart.createReportFolder();
 		BaseReport.createaemReportOpen(BaseReport.getDate("SDF1"));
+		
 				
 
 	}
@@ -36,6 +39,7 @@ public class TestSBT {
 	public void tearDownBrowser() throws IOException, InterruptedException, AWTException {
 		BaseBrowser.tearDown();
 		BaseReport.createaemReportFooter();
+		BaseReport.createaemReportOpen(BaseReport.getDate("SDF1"));
 
 
 
@@ -46,28 +50,14 @@ public class TestSBT {
 	public void testSBT() throws Exception {
 
 		SBTPerform.getCode();
-		BaseReport.createaemReportSeparator();
-		BaseReport.createaemReportSeparator();
 		SBTPerform.getHeader(testDriver, testName);
-
-
-		BaseReport.createaemReportSeparator();
-		BaseReport.softAssertion.assertAll();
-		BaseReport.createaemReportSeparator();
-				
-	}
-	@Test
-	public void testSBT1() throws Exception {
-		
-		BaseReport.createaemReportSeparator();
-		BaseReport.softAssertion.assertAll();
 		SBTPerform.getMenu(testDriver, "header_menu_name", testName);
+		SBTPerform.getPDF(testDriver, "PDFName", testName);
 		
+
 		BaseReport.createaemReportSeparator();
 		BaseReport.softAssertion.assertAll();
-		
-		SBTPerform.getPDF(testDriver, testName);
-		
+				
 	}
 
 }
