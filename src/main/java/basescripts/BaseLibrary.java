@@ -385,7 +385,7 @@ public String ReadPDF(String foundStr) throws IOException , InterruptedException
 	String TestText = new PDFTextStripper().getText(TestPDF.getPDDocument());
 
 	Assert.assertTrue(TestText.contains(foundStr));
-	
+	//System.out.println(TestText);
 	return foundStr;
 	
 	

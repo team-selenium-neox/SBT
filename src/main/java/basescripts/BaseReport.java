@@ -48,6 +48,7 @@ public class BaseReport {
 	private static final SimpleDateFormat SDF1 = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss"); // Timestamp for Report
 	private static final SimpleDateFormat SDF2 = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss"); // Timestamp for Error screenshot
 	private static final SimpleDateFormat SDF3 = new SimpleDateFormat("dd.MM.yyyy");
+	private static final SimpleDateFormat SDF4 = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 	
 	/** 
 	 * 
@@ -335,7 +336,7 @@ public class BaseReport {
 				softAssertion.assertEquals(foundStr, expectedStr);
 				// ====PASSED====
 				passedCounter = passedCounter +1;
-				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\" >");
+				fw.write("<td class=\"aemCellWhiteNormal\" style=\"background-color: #33FF00;\" style=\"text-align:center;\" >");
 				fw.write(mPassed);
 				fw.write("</td> \n");
 				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\"> \n");
@@ -346,29 +347,29 @@ public class BaseReport {
 				softAssertion.assertEquals(foundStr, expectedStr);
 				// ====FAIL====
 				failedCounter = failedCounter +1;
-				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;>");
+				fw.write("<td class=\"aemCellRedNormal\" style=\"background-color: #FF0000;\" style=\"text-align:center;>");
 				fw.write(mFailed);
 				fw.write("</td> \n");
-				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\">\n");
+				fw.write("<td class=\"aemCellRedNormal\" style=\"background-color: #FF0000;\" style=\"text-align:center;\">\n");
 				fw.write(mFailed);
 				fw.write("</td> \n");
-				fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\"><A TARGET =\"_blank\" HREF=\"");
+				fw.write("<td class=\"aemCellRedNormal\" style=\"background-color: #FF0000;\" style=\"text-align:center;\"><A TARGET =\"_blank\" HREF=\"");
 				fw.write( takeScreenshot(screenshotFileLink) + "\">Screenshot</A></td>\n");
-				fw.write("<td class=\"aemCellWhiteNormal\">");
+				fw.write("<td class=\"aemCellRedNormal\" style=\"background-color: #FF0000;\">");
 				fw.write(errMsg1);
 				fw.write("</td> \n");
 			}
 		}else {
 			failedCounter = failedCounter +1;
-			fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\">");
+			fw.write("<td class=\"aemCellRedNormal\" style=\"background-color: #FF0000;\" style=\"text-align:center;\">");
 			fw.write(mFailed);
 			fw.write("</td> \n");
-			fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\"> \n");
+			fw.write("<td class=\"aemCellRedNormal\" style=\"background-color: #FF0000;\" style=\"text-align:center;\"> \n");
 			fw.write(mFailed);
 			fw.write("</td> \n");
-			fw.write("<td class=\"aemCellWhiteNormal\" style=\"text-align:center;\"><A TARGET =\"_blank\" HREF=\"");
+			fw.write("<td class=\"aemCellRedNormal\" style=\"text-align:center;\"><A TARGET =\"_blank\" HREF=\"");
 			fw.write(takeScreenshot(screenshotFileLink) + "\">Screenshot</A></td>\n");
-			fw.write("<td class=\"aemCellWhiteNormal\">");
+			fw.write("<td class=\"aemCellRedNormal\" style=\"background-color: #FF0000;\">");
 			fw.write(errMsg1);
 			fw.write("</td> \n");
 		}
@@ -445,6 +446,17 @@ public class BaseReport {
 		return myDate1;
 	}
 	
+	public static String getDateBack(String format) throws IOException {
+		String myDate1 = "";
+		
+		if (format.equalsIgnoreCase("SDF1")) {
+			myDate1 = SDF1.format(new Date());
+		}else {
+			myDate1 = SDF4.format(new Date());
+		}
+		return myDate1;
+	}
+	
 	public static void setReportName(String reportValue) throws IOException {
 		reportName = reportValue;
 	}
@@ -459,14 +471,13 @@ public class BaseReport {
 		
 		WebDriver driver = BaseBrowser.getDriver();
 		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		myTestName = new String (proper.getPropValue(configFile, "projectname"));
 		
 		String filePath = "";
 		
 		filePath = aemReportPath + "screenshots" + File.separator;
-		//BaseReport.screenshotFile = filePath + myTestName + "_" + BaseReport.getDate("SDF2") + ".png";
-		BaseReport.screenshotFile = filePath + myTestName + "_" + ".png";
-		//BaseReport.screenshotFileLink = myTestName + "_" + BaseReport.getDate("SDF2") + ".png";
-		BaseReport.screenshotFileLink = myTestName + "_" + ".png";
+		BaseReport.screenshotFile = filePath + myTestName + "_" +  BaseReport.getDateBack("SDF4")+ ".png";
+		BaseReport.screenshotFileLink = myTestName + "_" + BaseReport.getDateBack("SDF4") + ".png";
 		FileUtils.copyFile(srcFile, new File(BaseReport.screenshotFile));
 		return screenshotFileLink ;	
 

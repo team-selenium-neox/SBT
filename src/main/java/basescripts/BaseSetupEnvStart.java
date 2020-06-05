@@ -14,11 +14,9 @@ public class BaseSetupEnvStart {
 	public static void createReportFolder() throws IOException, InterruptedException {
 		String sourceLoc1 = "";
 		String targetLoc1 = "";
-		String Date1 = "";
-		Date1 = new String(BaseReport.getDate("SDF2"));
 		
 		sourceLoc1 = BaseReport.aemReportPath + "screenshots";
-		targetLoc1 = BaseReport.aemReportPath + "screenshots_" + Date1 ;
+		targetLoc1 = BaseReport.aemReportPath + "screenshots_" + BaseReport.getDateBack("SDF4") ;
 		
 		File dir1 = new File(sourceLoc1);
 		File newName1 = new File(targetLoc1);
