@@ -15,6 +15,8 @@ public class BaseBrowserSetupGecko extends BaseBrowser {
 	
 	@SuppressWarnings("deprecation")
 	public static void geckoSetup() throws IOException, InterruptedException {
+		
+		String geckoDriverPath = "";
 		// for untrusted Web Pages
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability("acceptsInsecureCerts", true);
@@ -35,20 +37,22 @@ public class BaseBrowserSetupGecko extends BaseBrowser {
 		
 		cap.setCapability(FirefoxDriver.PROFILE, profile);
 		
-		String browserPath = "";
+		String browserPath = BaseReport.browserDriverPath + "geckodriver.exe";
 		File pathToBinary = null;
 		
 		pathToBinary = new File(browserPath);
 		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
 		
-		String geckoDriverPath = "";
+		geckoDriverPath = BaseReport.browserDriverPath +"geckodriver.exe";
 		
-		if (proper.getPropValue(configFile, "ENV").equalsIgnoreCase("no")) {
-			geckoDriverPath = BaseReport.basePath + BaseReport.browserDriverPath +"geckodriver.exe";
-		} else {
-			// This "else" is only used if you try to use another environment which is not standard
-			//geckoDriverPath = BaseReport.basePath + BaseReport.browserDriverPathENV +"geckoDriver.exe";
-		}
+//		String geckoDriverPath = "";
+//		
+//		if (proper.getPropValue(configFile, "ENV").equalsIgnoreCase("no")) {
+//			geckoDriverPath = BaseReport.browserDriverPath +"geckodriver.exe";
+//		} else {
+//			// This "else" is only used if you try to use another environment which is not standard
+//			geckoDriverPath = BaseReport.basePath + BaseReport.browserDriverPathENV +"geckodriver.exe";
+//		}
 		System.setProperty("webdriver.gecko.driver", geckoDriverPath);
 		
 		System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");

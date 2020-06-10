@@ -97,12 +97,15 @@ public static void getPDF(WebDriver testDriver, String target, String testName) 
 	BaseLibrary.sleep(BaseLibrary.sleepTimeLong);
 	BaseLibrary.sleep(BaseLibrary.sleepTimeLong);
 	bl.checkText(testName, "Text ist enthalten", prop.getPropValue(configFile, "pdfCheck"), bl.ReadPDF("JAVA") );
-
-	
-	
-
+	bl.checkText(testName, "enthält", "manni", bl.ReadPDF("manni"));
 	
 }
+
+	
+	
+
+	
+
 //public static void getSlide(WebDriver testDriver, String target, String testName) throws Exception {
 //	bl.scrollTo(testDriver, properFileXpath, "body_item_element2");
 //	BaseLibrary.sleep(BaseLibrary.sleepTimeMedium);

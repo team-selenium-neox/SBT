@@ -42,36 +42,36 @@ public class BaseRobot {
 			BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot);
 		}
 	}
-	public void scrollByKeyArrows(WebDriver testDriver, String direction, Integer iteration) throws AWTException, InterruptedException {
-		if (testDriver instanceof ChromeDriver) {
-			Integer i = 0;
-			
-			if (direction.equalsIgnoreCase("down")) {
-				for (i=0; i<iteration; i++) {
-					doTypeKeys("down");
-				}
-			} else if (direction.equalsIgnoreCase("up")) {
-				for (i=0; i<iteration; i++) {
-					doTypeKeys("up");
-				}
-			} else if (direction.equalsIgnoreCase("left")) {
-				for (i=0; i<iteration; i++) {
-					doTypeKeys("left");
-				}
-			} else if (direction.equalsIgnoreCase("right")) {
-				for (i=0; i<iteration; i++) {
-					doTypeKeys("right");
-				}
-			}
-			BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot);
-		}
-	}
+//	public void scrollByKeyArrows(WebDriver testDriver, String direction, Integer iteration) throws AWTException, InterruptedException {
+//		if (testDriver instanceof ChromeDriver) {
+//			Integer i = 0;
+//			
+//			if (direction.equalsIgnoreCase("down")) {
+//				for (i=0; i<iteration; i++) {
+//					doTypeKeys("down");
+//				}
+//			} else if (direction.equalsIgnoreCase("up")) {
+//				for (i=0; i<iteration; i++) {
+//					doTypeKeys("up");
+//				}
+//			} else if (direction.equalsIgnoreCase("left")) {
+//				for (i=0; i<iteration; i++) {
+//					doTypeKeys("left");
+//				}
+//			} else if (direction.equalsIgnoreCase("right")) {
+//				for (i=0; i<iteration; i++) {
+//					doTypeKeys("right");
+//				}
+//			}
+//			BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot);
+//		}
+//	}
 	/** 
 	 * 
 	 * IE Authentication 
 	 * 
 	 * */
-	public void authenticade(WebDriver testDriver, String user, String pwd) throws IOException, InterruptedException {
+	public void authenticate(WebDriver testDriver, String user, String pwd) throws IOException, InterruptedException {
 		try {
 			BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot);
 			StringSelection username = new StringSelection("user");
@@ -213,35 +213,35 @@ public class BaseRobot {
 		
 		}
 	}
-	public static void doTypeKeys(String keyStr) throws InterruptedException, AWTException {
-		Robot robot = new Robot();
-		
-		switch(keyStr) {
-		case "@":robot.keyPress(KeyEvent.VK_AT);
-		case "%":robot.keyPress(KeyEvent.VK_SHIFT); robot.keyPress(KeyEvent.VK_5); robot.keyRelease(KeyEvent.VK_5); robot.keyRelease(KeyEvent.VK_SHIFT);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "&":robot.keyPress(KeyEvent.VK_SHIFT); robot.keyPress(KeyEvent.VK_AMPERSAND); robot.keyRelease(KeyEvent.VK_AMPERSAND); robot.keyRelease(KeyEvent.VK_SHIFT);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "bTab":robot.keyPress(KeyEvent.VK_SHIFT); robot.keyPress(KeyEvent.VK_TAB); robot.keyRelease(KeyEvent.VK_TAB); robot.keyRelease(KeyEvent.VK_SHIFT);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "tab":robot.keyPress(KeyEvent.VK_TAB); robot.keyRelease(KeyEvent.VK_TAB); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "enter":robot.keyPress(KeyEvent.VK_ENTER); robot.keyRelease(KeyEvent.VK_ENTER); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "up":robot.keyPress(KeyEvent.VK_UP); robot.keyRelease(KeyEvent.VK_UP); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "down":robot.keyPress(KeyEvent.VK_DOWN); robot.keyRelease(KeyEvent.VK_DOWN); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "left":robot.keyPress(KeyEvent.VK_LEFT); robot.keyRelease(KeyEvent.VK_LEFT); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "right":robot.keyPress(KeyEvent.VK_RIGHT); robot.keyRelease(KeyEvent.VK_RIGHT); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "save":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_S); robot.keyRelease(KeyEvent.VK_S); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "copy":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_C); robot.keyRelease(KeyEvent.VK_C); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "paste":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_V); robot.keyRelease(KeyEvent.VK_V); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "zoomIn":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_SUBTRACT); robot.keyRelease(KeyEvent.VK_SUBTRACT); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "zoomOut":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_ADD); robot.keyRelease(KeyEvent.VK_ADD); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "f4":robot.keyPress(KeyEvent.VK_ALT); robot.keyPress(KeyEvent.VK_F4); robot.keyRelease(KeyEvent.VK_F4); robot.keyRelease(KeyEvent.VK_ALT);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "refresh":robot.keyPress(KeyEvent.VK_F5); robot.keyRelease(KeyEvent.VK_F5); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "iePDFDownload":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_SHIFT); robot.keyPress(KeyEvent.VK_ADD); robot.keyRelease(KeyEvent.VK_ADD); robot.keyRelease(KeyEvent.VK_SHIFT); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "closeFF":robot.keyPress(KeyEvent.VK_ALT); robot.keyPress(KeyEvent.VK_F4); robot.keyRelease(KeyEvent.VK_ALT); robot.keyRelease(KeyEvent.VK_F4);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		case "space":robot.keyPress(KeyEvent.VK_SPACE); robot.keyRelease(KeyEvent.VK_SPACE); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
-		
-		default:
-			throw new IllegalArgumentException("cannot type character" + keyStr);
-		
-		}
-	}
+//	public static void doTypeKeys(String keyStr) throws InterruptedException, AWTException {
+//		Robot robot = new Robot();
+//		
+//		switch(keyStr) {
+//		case "@":robot.keyPress(KeyEvent.VK_AT);
+//		case "%":robot.keyPress(KeyEvent.VK_SHIFT); robot.keyPress(KeyEvent.VK_5); robot.keyRelease(KeyEvent.VK_5); robot.keyRelease(KeyEvent.VK_SHIFT);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "&":robot.keyPress(KeyEvent.VK_SHIFT); robot.keyPress(KeyEvent.VK_AMPERSAND); robot.keyRelease(KeyEvent.VK_AMPERSAND); robot.keyRelease(KeyEvent.VK_SHIFT);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "bTab":robot.keyPress(KeyEvent.VK_SHIFT); robot.keyPress(KeyEvent.VK_TAB); robot.keyRelease(KeyEvent.VK_TAB); robot.keyRelease(KeyEvent.VK_SHIFT);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "tab":robot.keyPress(KeyEvent.VK_TAB); robot.keyRelease(KeyEvent.VK_TAB); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "enter":robot.keyPress(KeyEvent.VK_ENTER); robot.keyRelease(KeyEvent.VK_ENTER); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "up":robot.keyPress(KeyEvent.VK_UP); robot.keyRelease(KeyEvent.VK_UP); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "down":robot.keyPress(KeyEvent.VK_DOWN); robot.keyRelease(KeyEvent.VK_DOWN); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "left":robot.keyPress(KeyEvent.VK_LEFT); robot.keyRelease(KeyEvent.VK_LEFT); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "right":robot.keyPress(KeyEvent.VK_RIGHT); robot.keyRelease(KeyEvent.VK_RIGHT); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "save":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_S); robot.keyRelease(KeyEvent.VK_S); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "copy":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_C); robot.keyRelease(KeyEvent.VK_C); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "paste":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_V); robot.keyRelease(KeyEvent.VK_V); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "zoomIn":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_SUBTRACT); robot.keyRelease(KeyEvent.VK_SUBTRACT); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "zoomOut":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_ADD); robot.keyRelease(KeyEvent.VK_ADD); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "f4":robot.keyPress(KeyEvent.VK_ALT); robot.keyPress(KeyEvent.VK_F4); robot.keyRelease(KeyEvent.VK_F4); robot.keyRelease(KeyEvent.VK_ALT);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "refresh":robot.keyPress(KeyEvent.VK_F5); robot.keyRelease(KeyEvent.VK_F5); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "iePDFDownload":robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_SHIFT); robot.keyPress(KeyEvent.VK_ADD); robot.keyRelease(KeyEvent.VK_ADD); robot.keyRelease(KeyEvent.VK_SHIFT); robot.keyRelease(KeyEvent.VK_CONTROL);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "closeFF":robot.keyPress(KeyEvent.VK_ALT); robot.keyPress(KeyEvent.VK_F4); robot.keyRelease(KeyEvent.VK_ALT); robot.keyRelease(KeyEvent.VK_F4);BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		case "space":robot.keyPress(KeyEvent.VK_SPACE); robot.keyRelease(KeyEvent.VK_SPACE); BaseLibrary.sleep(BaseLibrary.sleepTimeMiniShortRobot); break;
+//		
+//		default:
+//			throw new IllegalArgumentException("cannot type character" + keyStr);
+//		
+//		}
+//	}
 
 }

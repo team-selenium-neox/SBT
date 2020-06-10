@@ -257,7 +257,7 @@ public WebElement getWebTextElement(WebDriver testDriver, String locator, String
 }
 /** 
  * 
- * checks the status of a dynamic menu
+ * checks the unchecked status of a dynamic menu
  * 
  * */
 public static String getCheckboxStatus(WebDriver testDriver, String locator, String properfile, String objRef, String attributValue, String testName) throws IOException {
@@ -376,20 +376,28 @@ public static String getpdfURL() {
 
 public String ReadPDF(String foundStr) throws IOException , InterruptedException, AWTException{
 	
+	//Boolean cast = true;
+	
 	pdf = proper.getPropValue(configFile, "PDFName");
 	pdfURL = proper.getPropValue(configFile, "PDFurl");
 	URL TestURL = new URL(pdfURL +  pdf);
 	RandomAccessBufferedFileInputStream TestFile = new RandomAccessBufferedFileInputStream(TestURL.openStream());
 	PDFParser TestPDF = new PDFParser((RandomAccessRead) TestFile);
 	TestPDF.parse();
-	String TestText = new PDFTextStripper().getText(TestPDF.getPDDocument());
-
-	Assert.assertTrue(TestText.contains(foundStr));
-	//System.out.println(TestText);
-	return foundStr;
 	
+	String TestText = new PDFTextStripper().getText(TestPDF.getPDDocument());
+	if (TestText.contains(foundStr)) {
+	Assert.assertTrue(TestText.contains(foundStr));
+	TestText = new String(foundStr);
+	return TestText;
+	}else {
+		Assert.assertFalse(TestText.contains(foundStr));
+		System.err.println(foundStr + " is not part of this document");
+		return null + " "+ foundStr + " is not part of this doc";
+		}
 	
 
 	}
+
 
 }

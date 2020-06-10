@@ -20,6 +20,7 @@ public class BaseReport {
 	
 	public static String basePath = Stream.of("C:", "Users", "RouxLoki", "Projekt Neox", "SBT").collect(Collectors.joining(File.separator)) + File.separator;
 	public static String browserDriverPath = Stream.of(System.getProperty("user.dir"), "BrowserDrivers").collect(Collectors.joining(File.separator)) +File.separator;
+	public static String browserDriverPathENV = Stream.of(System.getProperty("user.dir"), "BrowserDriversENV").collect(Collectors.joining(File.separator)) +File.separator;
 	public static String pdfDownloadPath = Stream.of(System.getProperty("user.dir"), "aemReport", "downloadPDF").collect(Collectors.joining(File.separator)) + File.separator;
 	public static String aemReportPath = Stream.of(System.getProperty("user.dir"), "aemReport").collect(Collectors.joining(File.separator)) + File.separator;
 	public static String LogPath = Stream.of(System.getProperty("user.dir"), "aemReport", "aemLogs").collect(Collectors.joining(File.separator)) + File.separator;
